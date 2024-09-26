@@ -3,7 +3,7 @@
 
 enum operations
 {
-    Add,
+    Add = 1,
     Substract,
     Multiply,
     Divide
@@ -11,27 +11,39 @@ enum operations
 
 int main()
 {
-    int firstOperand = 10;
+    int firstOperand;
 
-    int secondOperand = 5;
+    int secondOperand;
   
-    int operation = Add;
+    int operation;
+
+    puts("-----Welcome-----\nEnter first number: ");
+
+    scanf("%d", &firstOperand);
+
+    puts("\nEnter second number: ");
+    
+    scanf("%d", &secondOperand);
+    
+    puts("\nSelect operation: \n\n1 to Add\n2 to Substract\n3 to multiply\n4 to divide");
+
+    scanf("%d", &operation);
 
     if (operation == Add)
     {
-        printf("%d", AddNumbers(firstOperand, secondOperand));
+        printf("\nResult: %d", AddNumbers(firstOperand, secondOperand));
     }
     else if (operation == Substract)
     {
-        printf("%d", SubstractNumbers(firstOperand, secondOperand));
+        printf("\nResult: %d", SubstractNumbers(firstOperand, secondOperand));
     }
     else if (operation == Multiply)
     {
-        printf("%d", MultiplyNumbers(firstOperand, secondOperand));
+        printf("\nResult: %d", MultiplyNumbers(firstOperand, secondOperand));
     }
     else if (operation == Divide)
     {
-        printf("%d", DivideNumbers(firstOperand, secondOperand));
+        printf("\nResult: %d", DivideNumbers(firstOperand, secondOperand));
     }
 
     return 0;
