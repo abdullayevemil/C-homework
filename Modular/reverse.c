@@ -21,31 +21,7 @@ int isPowerOfTwo(int number)
 
 int divide(int dividend, int divisor)
 {
-    int low = 0;
     
-    int high = dividend;
-
-    int middle;
-
-    int quotient = 0;
-
-    while (low <= high)
-    {
-        middle = low + ((high - low) >> 1);
-
-        if (middle * divisor > dividend)
-        {
-            high = middle - 1;
-        }
-        else
-        {
-            quotient = middle;
-
-            low = middle + 1;
-        }
-    }
-
-    return quotient;
 }
 
 int factorial(int n)
